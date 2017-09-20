@@ -26,6 +26,7 @@ ETH: 0xA6DdDf8B0176bE9f855C367d45002877331243cE<br/>
 // Usage-examples are included in the class Test:<br/>
 <br/>
 <br/>
+
 public static void testStringData() {
 		StringData bittrexData = new StringData();
 		System.out.println(bittrexData.getBalances());
