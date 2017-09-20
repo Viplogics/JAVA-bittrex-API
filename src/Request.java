@@ -17,7 +17,7 @@ public class Request {
 	 
 	}
 
-	public String apiSecretCall(String apiKey, String apiSecret, String url, String nonce) throws IOException {
+	public String apiSecretCall(String apiKey, String apiSecret, String url, String nonce) throws IOException {		
 		String urlParameters = "?apikey=" + apiKey+ "&nonce=" + nonce;
 		URL obj = new URL(url+ urlParameters);
 		HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
@@ -28,9 +28,9 @@ public class Request {
 		con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
 		String signedUrl = Hmac_sha512.encrypt(apiSecret, url + urlParameters);
 		con.setRequestProperty("apisign", signedUrl);
-		System.out.println("Calling :\t" + url + urlParameters + "...:");
-		System.out.println("Sha512-encrypt of:\t" + url + urlParameters );
-		System.out.println("Signed Url in Header:\t" + signedUrl);
+		//System.out.println("Calling :\t" + url + urlParameters + "...:");
+		//System.out.println("Sha512-encrypt of:\t" + url + urlParameters );
+		//System.out.println("Signed Url in Header:\t" + signedUrl);
 
 		// Send post request
 		con.setDoOutput(true);
@@ -52,8 +52,9 @@ public class Request {
 			response.append(inputLine);
 		}
 		in.close();
-
-		return response.toString();
+		String s=response.toString();
+		System.out.println("Got following response from secret api call:\n"+s);
+		return s;
 	}
 	
 	public String apiPublicCall(String url) throws IOException {
@@ -65,12 +66,7 @@ public class Request {
 		con.setRequestMethod("POST");
 		con.setRequestProperty("User-Agent", USER_AGENT);
 		con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
-		 
-		 
-		System.out.println("Calling :\t" + url + "...:");
-	 
-		 
-
+ 		//System.out.println("Calling :\t" + url + "...:");
 		// Send post request
 		con.setDoOutput(true);
 		DataOutputStream wr = new DataOutputStream(con.getOutputStream());
@@ -91,8 +87,9 @@ public class Request {
 			response.append(inputLine);
 		}
 		in.close();
-
-		return response.toString();
+		String s=response.toString();
+		System.out.println("Got following response from public api call:\n"+s);
+		return s;
 	}
 
 }
