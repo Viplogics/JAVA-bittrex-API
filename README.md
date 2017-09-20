@@ -17,17 +17,16 @@ BTC: 15SHLso9jMtVsLZ839EBTNaiyPp1jfA5q2<br/>
 LTC: LWZFZLQSLNxpF6a56zyU33LkiKLHNpUoi8<br/>
 ETH: 0xA6DdDf8B0176bE9f855C367d45002877331243cE<br/>
 
-# Example-usage:
+# Usage:
 
-// Most important for usage are the clasess <b>bittrex.StringData</b> and <b>bittrex.JsonData</b><br/>
-<br/>
 // The  API-key, the secret key and the REST-API-version need to be set in a properties-file situated in<br/>
 // ./bittrex-client/bittrex-properties.txt".</br>
+// Most important for usage are the clasess <b>bittrex.StringData</b> and <b>bittrex.JsonData</b>. <br/>
 // Usage-examples are included in the class Test:<br/>
 <br/>
 <br/>
 
-public static void testStringData() {
+	public static void testStringData() {
 		StringData bittrexData = new StringData();
 		System.out.println(bittrexData.getBalances());
 		System.out.println(bittrexData.getBalance("XMR"));
