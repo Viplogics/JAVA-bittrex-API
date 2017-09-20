@@ -19,9 +19,12 @@ ETH: 0xA6DdDf8B0176bE9f855C367d45002877331243cE<br/>
 
 # Usage:
 
+
 // The  API-key, the secret key and the REST-API-version need to be set in a properties-file situated in<br/>
-// ./bittrex-client/bittrex-properties.txt".</br>
+// <center><b>./bittrex-client/bittrex-properties.txt.</b></center></br>
 // Most important for usage are the clasess <b>bittrex.StringData</b> and <b>bittrex.JsonData</b>. <br/>
+// If you have your own JSON-parser-tools, you can use the StringData-class to obtain the JSON-Strings from the api-calls.
+// Otherwise you can use the included JsonData-class.
 // Usage-examples are included in the class Test:<br/>
 <br/>
 <br/>
