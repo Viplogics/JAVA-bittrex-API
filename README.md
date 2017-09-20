@@ -18,8 +18,9 @@ ETH: 0xA6DdDf8B0176bE9f855C367d45002877331243cE<br/>
 
 # Example-usage:
 
-// Most important class for usage is the class bittrex.Data:<br/>
-<br/>
+// Most important for usage is the class <b>bittrex.Data</b><br/>
+<br/> Currently the API-key and secret key are hardcoded in this class...:  you need to replace them with your own keys.
+<br/><br/>
 Data bittrexData = new Data();<br/>
 String jsonBalance=bittrexData.getBalances();
 //<br/>
