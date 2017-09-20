@@ -2,7 +2,8 @@
 Java-Client for the Bittrex REST-API
 
 
-Bittrex is a US-based leading trading platform for crypto-currencies created by security professionals. Check here the website: <a href="www.bittrex.com">BITTREX</a>
+Bittrex is a US-based leading trading platform for crypto-currencies created by security professionals. 
+<br/>Check here the website: <a href="www.bittrex.com">BITTREX</a>
 
 Bittrex provides a simple and powerful REST API to allow programatically to perform nearly all actions that can be done via  their web-interface. All requests use the application/json content type and go over https. 
 
